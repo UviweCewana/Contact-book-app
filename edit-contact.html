@@ -28,6 +28,7 @@
         <script>
            var id = getId();
            document.getElementById("homeLink").addEventListener('click', homeLink)
+           document.getElementById("editConatact").addEventListener('click', editContact);
            console.log("The id is: " + id);
 
            function getId(){
@@ -60,6 +61,16 @@
                 document.getElementById("mobile").value = data[0].mobile;
                 document.getElementById("email").value = data[0].email;
                 document.getElementById("avatar").value = data[0].avatar;
+            }
+
+            function editContact(){
+                document.getElementById("firstname").readonly = false;
+                document.getElementById("lastname").readonly = false;
+                document.getElementById("mobile").readonly = false;
+                document.getElementById("email").readonly = false;
+                document.getElementById("avatar").hidden = false;
+                document.getElementById("submitForm").hidden = false;
+                document.getElementById("editContact").hidden = true;
             }
            }
         </script>
